@@ -1,0 +1,15 @@
+{
+  "name": "@2516atc/ui",
+  "version": "1.0.0",
+  "description": "UI settings and utilities",
+  "author": "Matt Smith <matt@mattonline.me>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2516atc/ui.git"
+  },
+  "peerDependencies": {
+    "foundation-sites": "6.x",
+    "sass": "1.x"
+  }
+}

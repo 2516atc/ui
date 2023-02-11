@@ -1,0 +1,24 @@
+@use 'sass:list';
+@import '../settings/colours';
+
+@mixin pixel-density-breakpoint($values) {
+    $density: if(length($values) > 1, nth($values, 2), nth($values, 1));
+    $minmax: if(index(min max, nth($values, 1)), nth($values, 1), min);
+
+    @media (-webkit-#{$minmax}-device-pixel-ratio: $density), (#{$minmax}-resolution: #{$density}dppx) {
+        @content;
+    }
+}
+
+@function palette-colour($values) {
+    $colour: if(length($values) > 1, nth($values, 2), nth($values, 1));
+    $variation: if(length($values) > 1, nth($values, 1), normal);
+
+    @return map-get(
+        map-get(
+            $colours,
+            $colour
+        ),
+        $variation
+    );
+}
