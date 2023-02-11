@@ -1,5 +1,5 @@
 @use 'sass:list';
-@import '../settings/colours';
+@use '../settings/colours';
 
 @mixin pixel-density-breakpoint($values) {
     $density: if(length($values) > 1, nth($values, 2), nth($values, 1));
@@ -16,7 +16,7 @@
 
     @return map-get(
         map-get(
-            $colours,
+            colours.$colours,
             $colour
         ),
         $variation
