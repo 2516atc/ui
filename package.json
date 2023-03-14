@@ -9,7 +9,6 @@
     "url": "https://github.com/2516atc/ui.git"
   },
   "peerDependencies": {
-    "foundation-sites": "6.x",
     "sass": "1.x"
   }
 }
